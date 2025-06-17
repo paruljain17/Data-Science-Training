@@ -36,7 +36,7 @@ print(name.rjust(30,"*")) #isme apn single character hi fill kr skte hai only
 
 #indexing and slicing
 #indexing is accessing single character from the string
-#indexing is accessing multiple character from the string
+#slicing is accessing multiple character from the string
 
 # h e l l o isme har ek charcater ko ek number se index kiya jata hai
 # 0 1 2 3 4  postive 
