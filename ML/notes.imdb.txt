@@ -1,3 +1,16 @@
+Linear Regression is one of the simplest and most widely used algorithms in machine learning and statistics. It helps you predict a value (output) based on a given input, assuming there is a linear relationship between them.
+Simple Example:
+You want to predict someone's weight based on their height.
+If taller people generally weigh more, then there's a linear relationship between height and weight.
+🧠 The Core Idea:
+It tries to fit a straight line through the data points.
+Equation of a straight line:
+y = mx + c
+Where:
+y = predicted value (output)
+x = input feature
+m = slope (how much y changes when x changes)
+c = intercept (value of y when x = 0)
 best fit is the line which cover most of the data points 
 linear regression is the relationship between x and y
 simple linear regression has one x and one y
@@ -5,10 +18,26 @@ multiple linear  regression is y=m1x1+m2x2+m3x3+e(error)
 Bestfit line --> M & C -->optimal values (MSE,MAE)
 MAE = Deal with outliners
 MSE= not deak with outliners
+R ->accuracy ko bdha dega kuki uska kisi column pr frk nhi pd rha isliye ye case glt hai that why adjusted r² r
 Cost Function ->loss calculate 
 Variation is how much the actual data is differ with average 
 Feature selection 
 Adjusted R
 data -> IV -> columns ->correlation
-R ->accuracy ko bdha dega kuki uska kisi column pr frk nhi pd rha isliye ye case glt hai that why adjusted r 
 model training ---- training(80),testing(20)   jitna  negative me data hoga usko utna ignore krenge mtlb nhi lenge
+
+LOGISTIC REGRESSION:
+=Classification algorithm
+=binary outcome->like yes no or spam/not spam
+probability->range 0 to 1
+                linear                                  LOGISTIC
+output         Continuous                               Discrete
+Function used   Linear function/Equation                Sigmoid
+GOal            Predict Value                           Predict probability
+
+
+Ϭ(2)=1/1+e­­­̄²­­­­­­­­ 
+Sigmoid Function=
+
+fit transform: here fit perform work of one hot encoding
+transform apply it means perform work of applying
