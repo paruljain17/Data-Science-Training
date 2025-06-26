@@ -41,3 +41,13 @@ Sigmoid Function=
 
 fit transform: here fit perform work of one hot encoding
 transform apply it means perform work of applying
+
+COnfusion Matrix(pdhnaaa h iseeee)
+1. accuracy= percentage of correct prediction by all prediction (Balanced Dataset)
+2.Precision- out of all predicted positive classes hpow many were acyually positive?
+3.Recall(TPR=TRUE POSITIVE RATE)- out of actual positive how many were correctly predict?
+4.F1 score=  a balance between precision and recall. IT mainly focus on the positive class performance(Inbalance data)
+
+f1 score = 2* p*r/p+r
+accuracy                                                        F1 score
+FP AND FN are equally important                                 FP & FN are costly
