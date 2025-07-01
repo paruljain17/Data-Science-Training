@@ -1,0 +1,28 @@
+
+<form method="POST">
+  <input type="text" name="brand_name_filter" placeholder="Enter brand name to filter">
+  <input type="submit" value="Search">
+</form>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Brand</th>
+    <th>Owner</th>
+    <th>Kms Driven</th>
+    <th>Age</th>
+    <th>Power</th>
+    <th>Predicted Price</th>
+  </tr>
+  {% for row in historical_data %}
+  <tr>
+    <td>{{ row['id'] }}</td>
+    <td>{{ row['brand_name'] }}</td>
+    <td>{{ row['owner'] }}</td>
+    <td>{{ row['kms_driven'] }}</td>
+    <td>{{ row['age'] }}</td>
+    <td>{{ row['power'] }}</td>
+    <td>{{ row['predicted_price'] }}</td>
+  </tr>
+  {% endfor %}
+</table>
