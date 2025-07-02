@@ -1,0 +1,32 @@
+Decision Tree:---->
+supervised alogorithm
+used for both classification and regression 
+it has 3  nodes- root node 
+                decision node
+                terminal node/leaf node\
+decision node are used to make decisions amd leaf node is the output of DN 
+to built DT we follow CART algo
+entropy is used to check the data impurity
+entropy and information gain is used to take the decisions 
+
+gini index=impurity
+fast 
+gini=[1-(pi)^2]
+range 0-1
+0 = worst case 
+1= best case
+
+#L1,L2(ridge,lasso)
+ensemble learning
+boosting alogorithm
+bagging
+XG boosting
+
+when we use multiple decision tree then it is known as random forest algorithm
+Random forest:
+supervised algo
+classification and regression
+multiple DT combine->RF
+regression                          classification
+10DT                                    10DT
+avg10=DT                                7 yes+ 3no=yes
