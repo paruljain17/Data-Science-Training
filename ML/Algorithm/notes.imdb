@@ -1,0 +1,25 @@
+SVM:
+Support vector machine
+supervised algorithm
+regrression and classification
+some like Logistic Regression it also makes a line 
+Hyperplane
+Support vector
+Margin
+kernels
+2D-line
+3D-plane 
+What is Regularization?
+Regularization is a technique that helps your machine learning model not get confused by noise in the data.
+
+
+Naive Bayes:
+supervised machine learning algorithm based on bayes theorem.it is called naive because it assumes independence among features which is often not true in real life but
+still works well in practice
+used  for:
+classification problems specially in text classification,spam detection 
+ p(c/x)=p(x/c).p(c)/p(x)
+ type:
+ 1. Gaussian naive bayes=continuous features  example=Medical data
+ 2. multinomial naive bayes= Discrete counts(word counts)    example= text classification
+ 3. bernoulli naive bayes=binary features(0 or 1)    example= spam detection
