@@ -1,0 +1,69 @@
+ Unlabelled-(independent)-yx
+ Less human supervisor - hidden pattern
+ Clustering ,DMR, association 
+ *Datapoints similarity
+ Clustering{K-Means
+            Agglomerative and divisive}
+K-Means= unsupervised ml Algo 
+based on Clustering(groups banana)-similarity Datapoints
+Centroid based Algo
+Working Of K-Means
+1. Select The number of K
+2. Select the k randomly
+3. Calculate Distance between the Centroid and Datapoints
+EC(D1,D2)=under the root(x2-x1)^2+ (y2-y1)^2
+4.Recalculate the Centroid(x2+x1/2,y2+y1/2)
+5.  from 3rd step repeat all the work 
+**optimal way to find k= no of Centroid
+1.Elbow Method
+2.Based on WCSS
+WCSS= Within cluster sum of square 
+WCSS is also known as inertia
+WCSS evaluate how well the clustering algo as grouped the data point
+ WCSS and K are indirectly proportional to each other but at one change changes are minimal means at that point there is no change 
+ WCSS= summision d(c,xi)^2
+if k=1 WCSS=1
+IF K>1
+ WCSS(total)=Avg()
+ WCSS should be minimum
+
+ MET
+ Dunn index - should be high[0-infinite]
+ inertia tries to minimize the Distance intracluster
+ intercluster is high
+ Dunn Index- Intra And Inter cluster Distance
+ inertia-less(minimum) DI-High(maximum)
+ 2Cluster = are at optimal Distance
+ DN=min(intercluster distance)/max(intercluster distance)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -15,7 +15,7 @@ def home():
 @app.route("/predict",methods = ["POST"] )
 def predict():
     try:
-        if request.form == "POST":
+        if request.method == "POST":
             messg = str(request.form["mesg"])
             transformed = vectorizer.transform([messg])
             transformed_data = transformed.toarray()
