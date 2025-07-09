@@ -1,0 +1,43 @@
+->Human behaviour mimic 
+complex problem solve 
+to deal with text data-NLP
+ANN-human brain-regression and classification
+CNN-HUman eye-iamges and videos
+RNN- speech--text 
+
+ANN:
+Architecture:
+3 layers-Input layer, Hidden layer, Output layer
+
+input layer= Number of input is defined by the number of features means if we have 10 features then we have 10 input nodes
+number of input nodes= number of features
+features= independent variables=x
+
+output layer=no. of nodes
+1. Binary classification- classify 2 class ,yes or no
+2. Multiclass classification- classify more than 2 class 
+3. if regression problwm then there is only 1 nodes
+
+hidden layer - it totally independent mtlb kitni bhi ho skti hai (jaise apn train kr re hai)
+
+Perceptron:-it’s basically a single-layer binary classifier that takes input features,
+multiplies them by weights, adds a bias, and passes the result through an activation function.
+ bias= it is a type of constant it adds because nodes not become zero 
+
+weights=learnable parameters 
+weights are the core learnable parameters that determine how inputs are transformed as they move through the network.
+
+activation functions=ye pdhna hai kitne hote hai konse kha kaam aate hai
+
+Loss functions are used in regression
+* MSE
+* MAE 
+* Huber Loss  (MAE+MSE)
+
+Loss function are used in classification:
+* Binary cross entropy Loss
+* Log Loss(cross entropy loss)
+#they both are same
+* Categorical cross entropy loss -one hot encoding
+* Sparse Categorical cross entropy loss - label encoding
+* hinge loss(SVM LOSS)
