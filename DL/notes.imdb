@@ -41,3 +41,23 @@ Loss function are used in classification:
 * Categorical cross entropy loss -one hot encoding
 * Sparse Categorical cross entropy loss - label encoding
 * hinge loss(SVM LOSS)
+
+
+Image Processing :
+types of images- Grey scale-    1   channel
+                 RGB image      3 channel
+
+Bit Depth:
+1-1- Bit- 2level (black and white)
+2- 8-Bit- 255 level of grey scale image
+          (0= black ,255=white)
+          128=mid gray
+
+3- 24 Bit-column image =R,G,B
+8 bit for each column(256,256,256)
+
+Libraries= *open CV 
+           * pillow
+
+*open CV- C++ With python
+
