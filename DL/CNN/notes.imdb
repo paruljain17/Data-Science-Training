@@ -61,3 +61,33 @@ Libraries= *open CV
 
 *open CV- C++ With python
 
+Filters/Kernel:- Feature Extraction 
+filters bhi ek matrix hoti hai ye phle se hi defined hai 
+filters hi weights ka kaam kete hai
+
+Drawbacks
+1. Memory issue
+2.Translation Variance
+
+types of pooling:
+1. Max pooling--most common used
+2. Min pooling
+3. Avg pooling
+4. L2 
+5. Global - G Max,G Avg
+
+* When you apply PL you have to tell about these 3 parameters:
+1. Size- (2,2)
+2. Stride - 2  skip/step   (n-m/s +1)
+3. Type- Max 
+
+DownSampling - feature map me se jo jyda important features ko extract krna 
+
+padding--- (n+2p-m+1)
+
+implemention:
+1. same- jitni padding ki require hogi woh apme ap apply hojugi
+2. valid - no padding
+
+CNN-CL-Loss - 1.BCL-LogLoss
+              2. MCL- softmax
