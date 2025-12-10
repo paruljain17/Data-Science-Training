@@ -91,3 +91,10 @@ implemention:
 
 CNN-CL-Loss - 1.BCL-LogLoss
               2. MCL- softmax
+
+no of epoch kaise pta krte hai mtlb kitne epoch chalane hai uske liye use krte hai callbacks
+callbacks are the funcyions that are called during the training process 
+#early stopping
+
+
+

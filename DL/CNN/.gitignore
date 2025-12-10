@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask cache and logs
+instance/
+*.log
+
+# Environment
+.env
+venv/
+env/
+ENV/
+.venv/
+*.sqlite3
+
+# Model files
+*.h5
+*.hdf5
+*.pkl
+
+# Uploads and generated files
+static/uploads/*
+!static/uploads/.gitkeep
+
+# VSCode or PyCharm IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Python egg
+*.egg-info/
+dist/
+build/
+
+# System or temporary files
+*.bak
+*.swp
+*.tmp
+
+# Notebook output if any
+*.out
+

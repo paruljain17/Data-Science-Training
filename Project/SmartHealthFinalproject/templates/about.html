@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Smart Health Diagnosis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f0f6fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: slideIn 1s ease-in-out;
+    }
+    h2 {
+      color: #0077b6;
+      margin-top: 30px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #00b4d8;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .highlight {
+      font-weight: 600;
+      color: #0077b6;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0077b6;
+      color: #fff;
+      margin-top: 30px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { transform: translateY(50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Smart Health Diagnosis and Risk Prediction</h1>
+    <p>AI-powered health risk prediction with Machine Learning and Deep Learning</p>
+  </header>
+
+  <div class="container">
+    <h2>About the Project</h2>
+    <p>
+      The <span class="highlight">Smart Health Diagnosis and Risk Prediction System</span> is an AI-driven web application that predicts 
+      potential health risks based on various medical parameters. By leveraging <strong>Machine Learning (ML)</strong> and 
+      <strong>Deep Learning (DL)</strong> algorithms (Naive Bayes, SVM, KNN, Random Forest, Decision Tree, ANN, and CNN), 
+      the system offers accurate predictions and actionable health recommendations.
+    </p>
+
+    <h2>Key Features</h2>
+    <ul>
+      <li>Health Risk Prediction using ML & DL models</li>
+      <li>Deep Learning integration (ANN & CNN)</li>
+      <li>Interactive and medical-themed UI</li>
+      <li>AI Explainability (SHAP/LIME support)</li>
+      <li>Data Visualization for insights</li>
+      <li>Scalable and modular backend</li>
+      <li>Risk Score & personalized recommendations</li>
+    </ul>
+
+    <h2>Parameters and Their Meanings</h2>
+    <ul>
+      <li><strong>Age:</strong> User's age (years).</li>
+      <li><strong>Gender:</strong> Male or Female.</li>
+      <li><strong>Chest Pain Type (CPT):</strong> 0 - Typical Angina, 1 - Atypical Angina, 2 - Non-Anginal Pain, 3 - Asymptomatic.</li>
+      <li><strong>Resting Blood Pressure (mm Hg):</strong> Blood pressure at rest.</li>
+      <li><strong>Cholesterol Level (mg/dl):</strong> Cholesterol level in blood.</li>
+      <li><strong>Fasting Blood Sugar (FBS):</strong> 0 - &lt;120 mg/dl (Normal), 1 - &gt;120 mg/dl (Diabetes risk).</li>
+      <li><strong>Resting ECG:</strong> 0 - Normal, 1 - Abnormalities detected, 2 - Left ventricular hypertrophy.</li>
+      <li><strong>Maximum Heart Rate:</strong> Maximum heart rate achieved.</li>
+      <li><strong>Exercise-Induced Angina (EIA):</strong> 0 - No pain, 1 - Pain during exercise.</li>
+      <li><strong>Oldpeak:</strong> ST depression induced by exercise.</li>
+      <li><strong>Slope:</strong> 0 - Upsloping, 1 - Flat, 2 - Downsloping.</li>
+      <li><strong>Number of Major Vessels:</strong> Number of vessels colored by fluoroscopy (0–3)00.</li>
+      <li><strong>Thalassemia (Thal):</strong> 0 - Normal, 1 - Fixed defect, 2 - Reversible defect.</li>
+    </ul>
+
+    <h2>Tech Stack</h2>
+    <ul>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript, Streamlit/Flask UI</li>
+      <li><strong>Backend:</strong> Python (Flask/Streamlit)</li>
+      <li><strong>Machine Learning:</strong> scikit-learn (Random Forest, SVM, KNN, Decision Tree, Naive Bayes)</li>
+      <li><strong>Deep Learning:</strong> TensorFlow & Keras (ANN, CNN)</li>
+      
+    </ul>
+
+    <h2>Future Enhancements</h2>
+    <ul>
+      <li>Adding more disease prediction modules (Kidney, Liver, etc.)</li>
+      <li>Integration with IoT health devices</li>
+      <li>Personalized AI chatbot for health advice</li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 Smart Health Diagnosis Project. All Rights Reserved.
+  </footer>
+
+</body>
+</html>

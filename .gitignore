@@ -1,0 +1,81 @@
+# -----------------------------
+# Ignore large datasets & CSVs
+# -----------------------------
+*.csv
+*.xlsx
+*.xls
+*.json
+*.xml
+*.parquet
+*.zip
+*.rar
+*.7z
+
+# Ignore dataset folders
+dataset/
+datasets/
+data/
+Data/
+Dataset/
+Datasets/
+
+# -----------------------------
+# Python temporary files
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+
+# -----------------------------
+# Checkpoints, models, weights
+# -----------------------------
+*.h5
+*.hdf5
+*.model
+*.ckpt
+*.pth
+*.pt
+*.tflite
+
+# -----------------------------
+# Notebooks checkpoints
+# -----------------------------
+*.ipynb_checkpoints/
+
+# -----------------------------
+# IDE/Editor files
+# -----------------------------
+.vscode/
+.idea/
+*.swp
+
+# -----------------------------
+# Environment files
+# -----------------------------
+.env
+.venv/
+venv/
+env/
+
+# -----------------------------
+# Logs & temporary files
+# -----------------------------
+*.log
+*.tmp
+
+# -----------------------------
+# Node / Web files (in case)
+# -----------------------------
+node_modules/
+
+# -----------------------------
+# Ignore big folders in training
+# -----------------------------
+library/
+lib/
+output/
+saved_models/
+runs/

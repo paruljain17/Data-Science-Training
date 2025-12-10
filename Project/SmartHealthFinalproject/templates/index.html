@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Smart Heart - Quick Check</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CDN (or your CSS) -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body { background:#f2fbf6; padding:30px; }
+    .card { border-radius:12px; box-shadow:0 6px 18px rgba(0,0,0,0.06);}
+    label { font-weight:600; }
+    .help { font-size:0.85rem; color:#6c757d; }
+    .result-box { font-size:1.1rem; padding:16px; border:2px dashed #cfe9df; border-radius:8px; background:#fff; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2 class="mb-3">Quick Heart Risk Check</h2>
+  <div class="row">
+    <div class="col-md-7">
+      <form method="post">
+        <div class="card p-4 mb-3">
+          <h5>Basic Info</h5>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label>Age</label>
+              <input type="number" name="age" min="1" max="120" class="form-control" placeholder="e.g., 54">
+              <small class="help">Age in years</small>
+            </div>
+            <div class="form-group col-md-4">
+              <label>Sex</label><br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sex" value="1" id="male" required>
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="sex" value="0" id="female">
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+              <small class="help d-block mt-1">1 = Male, 0 = Female</small>
+            </div>
+            <div class="form-group col-md-4">
+              <label>Chest Pain Type</label>
+              <select name="cp" class="form-control" required>
+                <option value="">-- Select --</option>
+                <option value="0">0 - Typical angina</option>
+                <option value="1">1 - Atypical</option>
+                <option value="2">2 - Non-anginal</option>
+                <option value="3">3 - Asymptomatic</option>
+              </select>
+              <small class="help">Type of chest pain (if unsure choose 3)</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Resting BP (mm Hg)</label>
+              <input type="number" name="trestbps" class="form-control" placeholder="e.g., 120 or leave blank">
+              <small class="help">Optional — if unknown leave blank</small>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Cholesterol (mg/dl)</label>
+              <input type="number" name="chol" class="form-control" placeholder="e.g., 200 or leave blank">
+              <small class="help">Optional — if unknown leave blank</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Fasting blood sugar &gt; 120 mg/dl?</label>
+              <select name="fbs" class="form-control">
+                <option value="0">No / Don't know</option>
+                <option value="1">Yes &gt;120 mg/dl</option>
+              </select>
+              <small class="help">Select yes only if you know fasting glucose &gt;120</small>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Exercise-induced chest pain?</label>
+              <select name="exang_toggle" class="form-control">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+                <option value="dontknow">Don't know</option>
+              </select>
+              <small class="help">Did you feel chest pain during exertion/exercise?</small>
+            </div>
+          </div>
+
+          <!-- Simple symptom questions used to map to advanced params -->
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>After exercise, do you feel severe breathlessness/dizziness?</label>
+              <select name="symptom_after_exercise" class="form-control">
+                <option value="dontknow">Don't know</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+              </select>
+              <small class="help">Used to estimate ST depression (oldpeak)</small>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Any doctor said abnormal stress test / ECG?</label>
+              <select name="stress_test_problem" class="form-control">
+                <option value="dontknow">Don't know</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+              </select>
+              <small class="help">Helps estimate slope/restecg</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Angiography done previously?</label>
+              <select name="angiography" class="form-control">
+                <option value="none">No</option>
+                <option value="unknown">Don't know</option>
+                <option value="yes_known">Yes (I had it)</option>
+              </select>
+              <small class="help">If yes, user may know vessel count — otherwise default</small>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label>Do you know your max heart rate achieved (e.g., during exercise)?</label>
+              <input type="number" name="thalach" class="form-control" placeholder="e.g., 150 or leave blank">
+              <small class="help">Optional — leave blank if unknown</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="col-md-12">
+              <button type="button" class="btn btn-link p-0" id="showAdvancedBtn">Show advanced inputs (for clinicians)</button>
+            </div>
+          </div>
+
+          <!-- Advanced inputs (hidden by default) -->
+          <div id="advancedSection" style="display:none; margin-top:12px;">
+            <hr>
+            <h6>Advanced (optional)</h6>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label>Resting ECG (0/1/2)</label>
+                <select name="restecg" class="form-control">
+                  <option value="">Auto / I don't know</option>
+                  <option value="0">0 - Normal</option>
+                  <option value="1">1 - ST-T abnormality</option>
+                  <option value="2">2 - LV hypertrophy</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label>Oldpeak (ST depression)</label>
+                <input type="text" name="oldpeak" class="form-control" placeholder="e.g., 1.2 or leave blank">
+              </div>
+
+              <div class="form-group col-md-4">
+                <label>Slope (0/1/2)</label>
+                <select name="slope" class="form-control">
+                  <option value="">Auto / I don't know</option>
+                  <option value="0">0 - Upsloping</option>
+                  <option value="1">1 - Flat</option>
+                  <option value="2">2 - Downsloping</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row mt-2">
+              <div class="form-group col-md-4">
+                <label>CA (0-3)</label>
+                <input type="number" name="ca" min="0" max="3" class="form-control" placeholder="0-3 or blank">
+              </div>
+              <div class="form-group col-md-4">
+                <label>Thal</label>
+                <select name="thal_easy" class="form-control">
+                  <option value="">Auto / I don't know</option>
+                  <option value="normal">Normal (0)</option>
+                  <option value="fixed">Fixed defect (1)</option>
+                  <option value="reversible">Reversible (2)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Predict Risk</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-5">
+      <div class="card p-4">
+        <h5>Result</h5>
+        <div class="result-box">
+          {% if result %}
+            <p><strong>Probability:</strong> {{ result.probability }}</p>
+            <p><strong>Prediction:</strong> {% if result.pred==1 %}Higher risk{% else %}Lower risk{% endif %}</p>
+            <p>{{ result.message }}</p>
+            <small class="help">Threshold used: {{ result.threshold }}</small>
+          {% else %}
+            <p>Your result will appear here after you submit the form.</p>
+          {% endif %}
+        </div>
+        <hr>
+        <p class="help">Note: This tool is for quick screening only. Not a medical diagnosis. If in doubt, consult a doctor.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+  document.getElementById("showAdvancedBtn").addEventListener("click", function(){
+    var adv = document.getElementById("advancedSection");
+    if(adv.style.display === "none"){
+      adv.style.display = "block";
+      this.innerText = "Hide advanced inputs";
+    } else {
+      adv.style.display = "none";
+      this.innerText = "Show advanced inputs (for clinicians)";
+    }
+  });
+</script>
+</body>
+</html>
